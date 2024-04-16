@@ -1,0 +1,57 @@
+\hypertarget{index_overview}{}\doxysection{overview}\label{index_overview}
+The Jarvis March algorithm is also known as the Gift Wrapping algorithm. itis a method for computing the convex hull of a set of points in the plane. It iteratively constructs the convex hull by selecting the next point in the hull as the one that makes the smallest counterclockwise angle with the previous hull point.
+
+Raylib c++ library was used for visualization\+:Raylib is a simple and easy-\/to-\/use open-\/source game development library that provides a set of tools and functions for creating 2D and 3D games, as well as graphical applications
+
+for the website Wasm was used\+: Web\+Assembly (Wasm) is a binary instruction format for a stack-\/based virtual machine. It is designed as a portable compilation target for programming languages, enabling code to run in web browsers at near-\/native speed. for converting c++ code to Wasn Emscripten was used\+:Emscripten is an open-\/source toolchain that allows developers to compile C, C++, and other languages into Web\+Assembly (Wasm) code, enabling them to run native applications on the web.\hypertarget{index_time_complexity}{}\doxysection{time\+\_\+complexity}\label{index_time_complexity}
+time complexity is
+
+O(n$\ast$m) \{in paper stated as \+: at most (n+1)$\ast$m\}
+
+where n is number of points and m is number of points in convex hull
+
+time complexity analysis
+
+1) we choose the left most point \+: can be done in O(n)
+
+2) we then choose the most anti-\/clockwise point O(n) this would be the next point
+
+we repeat step 2 until we get all points, hence step 2 is repeated m times
+
+the time complexity will be O(n$\ast$m)
+
+Optimization\+:
+
+1)we remove points which are part of the hull
+
+2)we remove points which are inside the area of the temporary formed hull
+
+this would reduce the time complexity , hence on average it is lesser than O(n$\ast$m), but worst case will still be O(n$\ast$m)\hypertarget{index_visualization}{}\doxysection{visualization}\label{index_visualization}
+
+
+in the image \+: ~\newline
+ 1) {\bfseries{white points}} \+: the points which can be the next point of the hull ~\newline
+ 2) {\bfseries{black points}} \+: points which cant be the next point in the hull ~\newline
+ 3) {\bfseries{while line}} \+: edges of the convex hull ~\newline
+ 4) {\bfseries{red line}} \+:points in the polygon formed by this line cant be a part of the convex hull ~\newline
+ 5) {\bfseries{black line}} \+:temporary next edge (if the algo finds a better line it will be erased) ~\newline
+\hypertarget{index_code_design}{}\doxysection{code\+\_\+design}\label{index_code_design}
+in raylib there is a {\itshape game window} and it is run 60 times every second(we can set the rate ) ~\newline
+ hence we write what all objects we want to draw in this window and then again erase it in the begining of the next frame and draw again hence we need to perform our algo and then display what we want to be in the frame
+
+we move one step ahead in the algo every .2 seconds so that it is easy to visualize
+
+hence the algo had to be done using a single loop if visualization of intermidiate steps also had to be shown.
+
+j increments every .2 seconds and when j becomes equal to n , it is set to 0 and i is incremented
+
+this way even intermidiate steps can be visualized
+
+there are different phases when select==1 \+: we are in the selection phase where user can select points if select==0 and over==0\+: algo visualization is going on if over==1 \+: the visualization is over and user can restart if he wants to
+
+for finding most anti-\/ clockwise point
+
+we use crossproduct to find the orientation \+: ~\newline
+ (q.\+y -\/ p.\+y) $\ast$ (r.\+x -\/ q.\+x) -\/ (q.\+x -\/ p.\+x) $\ast$ (r.\+y -\/ q.\+y) ~\newline
+ if we find a point which is more anti\+: clockwise we update next point with this points value ~\newline
+ 

@@ -1,0 +1,273 @@
+\hypertarget{class_points}{}\doxysection{Points Class Reference}
+\label{class_points}\index{Points@{Points}}
+
+
+this is the class encapsulating the points,and its functions  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_points_a93f9985c1af40dafcc235d5f74fe1825}{clash}} (Vector2 p1, Vector2 p2)
+\begin{DoxyCompactList}\small\item\em this checks if the points clash \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_points_a8dc2c9540a8c004c5aadfe9be7c9cf91}{isvalid\+\_\+point}} (Vector2 point)
+\begin{DoxyCompactList}\small\item\em thich checks if the given point has a valid location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_points_ae797e2180df03f74913204e53502e042}{add\+\_\+point}} (Vector2 new\+\_\+point)
+\begin{DoxyCompactList}\small\item\em this adds the point to points\+\_\+location \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_points_a87c21b9196ba817b9dee1aa6dd4d8058}{draw}} ()
+\begin{DoxyCompactList}\small\item\em draws the points on screen \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_points_a28a2eaae6a591d34d7bcd5ef6448596e}\label{class_points_a28a2eaae6a591d34d7bcd5ef6448596e}} 
+void {\bfseries draw\+\_\+blue} ()
+\item 
+void \mbox{\hyperlink{class_points_af05433ca1402fc06e01c1b0303be9eb6}{draw\+\_\+line}} (bool over)
+\begin{DoxyCompactList}\small\item\em draws the lines of the hull on screen \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_points_ad4bebd3df5dda66c19a9781518191cdb}{find\+\_\+left}} ()
+\begin{DoxyCompactList}\small\item\em finds the leftmost point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_points_aabfecd57b83ee9e0880bc0a0de7d9ba0}{orientation}} (Vector2 p, Vector2 q, Vector2 r)
+\begin{DoxyCompactList}\small\item\em crossproduct to let us know if point is on right /left or collinear \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_points_aab1eceef5e89212c02969c9083ab83b9}{calculate\+\_\+next}} (Vector2 cur, int next, int i)
+\begin{DoxyCompactList}\small\item\em calculates if i can be the next point on hull \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_points_a9fd463972cd4a6c7b4a9b829b9258b09}\label{class_points_a9fd463972cd4a6c7b4a9b829b9258b09}} 
+void {\bfseries draw\+\_\+invalid} ()
+\begin{DoxyCompactList}\small\item\em draws the points which cant be a part of the hull as black \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_points_a9cbfd65093e4caf8277b1fa60289cf83}{draw\+\_\+invalid\+\_\+line}} (Vector2 start, Vector2 cur)
+\begin{DoxyCompactList}\small\item\em draws the line below which the points are invalid \+:a point is invalid if it cant be a part of the remaining hull \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_points_acebeb9bc8b35397eee7c718a5404fc80}{get\+\_\+invalid}} (Vector2 start, Vector2 cur)
+\begin{DoxyCompactList}\small\item\em finds the invalid points, all points below the invalid line are invalid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_points_ab39c1fc5b3b6f4e58d522af6992b92e4}{add\+\_\+random}} ()
+\begin{DoxyCompactList}\small\item\em adds 30 points randomly \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_points_a755e692149bdaf0dbac4e8005457711b}{add\+\_\+from\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em it adds the points present in the file input points \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_points_a54d328e59da2b40ec1a99fa974e00b09}\label{class_points_a54d328e59da2b40ec1a99fa974e00b09}} 
+vector$<$ Vector2 $>$ {\bfseries points\+\_\+location}
+\begin{DoxyCompactList}\small\item\em stores the location of the valid points , a point is valid if it has a chance to be in the hull \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_points_ab9059d3b649262f89ca5bdaf212fba52}\label{class_points_ab9059d3b649262f89ca5bdaf212fba52}} 
+vector$<$ Vector2 $>$ {\bfseries points\+\_\+in\+\_\+hull}
+\begin{DoxyCompactList}\small\item\em stores the points which have been identified to be in the hull \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_points_a2b90610289634991f3b92b411420758f}\label{class_points_a2b90610289634991f3b92b411420758f}} 
+vector$<$ Vector2 $>$ {\bfseries invalid}
+\begin{DoxyCompactList}\small\item\em has the points which cant be a part of the hull \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_points_a741a906f24cef9b7c9af0f546541a455}\label{class_points_a741a906f24cef9b7c9af0f546541a455}} 
+vector$<$ Vector2 $>$ {\bfseries blue}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this is the class encapsulating the points,and its functions 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_points_a755e692149bdaf0dbac4e8005457711b}\label{class_points_a755e692149bdaf0dbac4e8005457711b}} 
+\index{Points@{Points}!add\_from\_file@{add\_from\_file}}
+\index{add\_from\_file@{add\_from\_file}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{add\_from\_file()}{add\_from\_file()}}
+{\footnotesize\ttfamily void Points\+::add\+\_\+from\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+it adds the points present in the file input points 
+
+\begin{DoxyNote}{Note}
+the file is present in the folder \char`\"{}input\char`\"{} which present in the parent directory 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_points_ae797e2180df03f74913204e53502e042}\label{class_points_ae797e2180df03f74913204e53502e042}} 
+\index{Points@{Points}!add\_point@{add\_point}}
+\index{add\_point@{add\_point}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{add\_point()}{add\_point()}}
+{\footnotesize\ttfamily void Points\+::add\+\_\+point (\begin{DoxyParamCaption}\item[{Vector2}]{new\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+this adds the point to points\+\_\+location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+point} & the point clicked by the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+it uses the \mbox{\hyperlink{class_points_a8dc2c9540a8c004c5aadfe9be7c9cf91}{isvalid\+\_\+point()}} function to determine if its valid 
+\end{DoxyNote}
+\begin{DoxyAttention}{Attention}
+if a point is clicked on the edge it shifts it so that it can fit in frame 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_points_ab39c1fc5b3b6f4e58d522af6992b92e4}\label{class_points_ab39c1fc5b3b6f4e58d522af6992b92e4}} 
+\index{Points@{Points}!add\_random@{add\_random}}
+\index{add\_random@{add\_random}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{add\_random()}{add\_random()}}
+{\footnotesize\ttfamily void Points\+::add\+\_\+random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+adds 30 points randomly 
+
+\begin{DoxyNote}{Note}
+if any point is invalid we discard it(hence the number of points can be less than 30) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_points_aab1eceef5e89212c02969c9083ab83b9}\label{class_points_aab1eceef5e89212c02969c9083ab83b9}} 
+\index{Points@{Points}!calculate\_next@{calculate\_next}}
+\index{calculate\_next@{calculate\_next}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{calculate\_next()}{calculate\_next()}}
+{\footnotesize\ttfamily int Points\+::calculate\+\_\+next (\begin{DoxyParamCaption}\item[{Vector2}]{cur,  }\item[{int}]{next,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates if i can be the next point on hull 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur} & current final point on hull \\
+\hline
+{\em next} & temporary next point \\
+\hline
+{\em i} & the point to compare next with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+temporarry next point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_points_a93f9985c1af40dafcc235d5f74fe1825}\label{class_points_a93f9985c1af40dafcc235d5f74fe1825}} 
+\index{Points@{Points}!clash@{clash}}
+\index{clash@{clash}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{clash()}{clash()}}
+{\footnotesize\ttfamily bool Points\+::clash (\begin{DoxyParamCaption}\item[{Vector2}]{p1,  }\item[{Vector2}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+this checks if the points clash 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & point 1 \\
+\hline
+{\em p2} & point 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 1 if they clash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_points_a87c21b9196ba817b9dee1aa6dd4d8058}\label{class_points_a87c21b9196ba817b9dee1aa6dd4d8058}} 
+\index{Points@{Points}!draw@{draw}}
+\index{draw@{draw}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Points\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+draws the points on screen 
+
+\begin{DoxyNote}{Note}
+the points are while colour 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_points_a9cbfd65093e4caf8277b1fa60289cf83}\label{class_points_a9cbfd65093e4caf8277b1fa60289cf83}} 
+\index{Points@{Points}!draw\_invalid\_line@{draw\_invalid\_line}}
+\index{draw\_invalid\_line@{draw\_invalid\_line}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{draw\_invalid\_line()}{draw\_invalid\_line()}}
+{\footnotesize\ttfamily void Points\+::draw\+\_\+invalid\+\_\+line (\begin{DoxyParamCaption}\item[{Vector2}]{start,  }\item[{Vector2}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+draws the line below which the points are invalid \+:a point is invalid if it cant be a part of the remaining hull 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & first point on hull \\
+\hline
+{\em cur} & current latest point on hull \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+it is in red colour 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_points_af05433ca1402fc06e01c1b0303be9eb6}\label{class_points_af05433ca1402fc06e01c1b0303be9eb6}} 
+\index{Points@{Points}!draw\_line@{draw\_line}}
+\index{draw\_line@{draw\_line}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{draw\_line()}{draw\_line()}}
+{\footnotesize\ttfamily void Points\+::draw\+\_\+line (\begin{DoxyParamCaption}\item[{bool}]{over }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+draws the lines of the hull on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em over} & this param tells us if the line on top is temporary or permanent (this is used to decide color of line) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+if the line is while it is is part of the hull 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_points_ad4bebd3df5dda66c19a9781518191cdb}\label{class_points_ad4bebd3df5dda66c19a9781518191cdb}} 
+\index{Points@{Points}!find\_left@{find\_left}}
+\index{find\_left@{find\_left}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{find\_left()}{find\_left()}}
+{\footnotesize\ttfamily int Points\+::find\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+finds the leftmost point 
+
+\begin{DoxyReturn}{Returns}
+the index of the leftmost point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_points_acebeb9bc8b35397eee7c718a5404fc80}\label{class_points_acebeb9bc8b35397eee7c718a5404fc80}} 
+\index{Points@{Points}!get\_invalid@{get\_invalid}}
+\index{get\_invalid@{get\_invalid}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{get\_invalid()}{get\_invalid()}}
+{\footnotesize\ttfamily void Points\+::get\+\_\+invalid (\begin{DoxyParamCaption}\item[{Vector2}]{start,  }\item[{Vector2}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+finds the invalid points, all points below the invalid line are invalid 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_points_a9cbfd65093e4caf8277b1fa60289cf83}{draw\+\_\+invalid\+\_\+line()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & first point on hull \\
+\hline
+{\em cur} & current latest point on hull \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_points_a8dc2c9540a8c004c5aadfe9be7c9cf91}\label{class_points_a8dc2c9540a8c004c5aadfe9be7c9cf91}} 
+\index{Points@{Points}!isvalid\_point@{isvalid\_point}}
+\index{isvalid\_point@{isvalid\_point}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{isvalid\_point()}{isvalid\_point()}}
+{\footnotesize\ttfamily bool Points\+::isvalid\+\_\+point (\begin{DoxyParamCaption}\item[{Vector2}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+thich checks if the given point has a valid location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & checks if this point is valid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+a point is valid if it doesnt overlap with any other point 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_points_a93f9985c1af40dafcc235d5f74fe1825}{clash()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_points_aabfecd57b83ee9e0880bc0a0de7d9ba0}\label{class_points_aabfecd57b83ee9e0880bc0a0de7d9ba0}} 
+\index{Points@{Points}!orientation@{orientation}}
+\index{orientation@{orientation}!Points@{Points}}
+\doxysubsubsection{\texorpdfstring{orientation()}{orientation()}}
+{\footnotesize\ttfamily int Points\+::orientation (\begin{DoxyParamCaption}\item[{Vector2}]{p,  }\item[{Vector2}]{q,  }\item[{Vector2}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+crossproduct to let us know if point is on right /left or collinear 
+
+\begin{DoxyReturn}{Returns}
+if its 0 rhen colinear ,if 2 then clockwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mnikh/\+One\+Drive/\+Documents/1proj/website\+\_\+q1/daa\+\_\+q1/main.\+cpp\end{DoxyCompactItemize}

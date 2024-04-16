@@ -1,0 +1,98 @@
+\hypertarget{main_8cpp}{}\doxysection{C\+:/\+Users/mnikh/\+One\+Drive/\+Documents/1proj/website\+\_\+q1/daa\+\_\+q1/main.cpp File Reference}
+\label{main_8cpp}\index{C:/Users/mnikh/OneDrive/Documents/1proj/website\_q1/daa\_q1/main.cpp@{C:/Users/mnikh/OneDrive/Documents/1proj/website\_q1/daa\_q1/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$raylib.\+h$>$}\newline
+{\ttfamily \#include $<$raymath.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_points}{Points}}
+\begin{DoxyCompactList}\small\item\em this is the class encapsulating the points,and its functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_abf30848723419125d7009e38f1a42686}{Event\+Triggered}} (double interval)
+\begin{DoxyCompactList}\small\item\em this function is used so that the next step of the algo is executed after some time \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em the window is made here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}} =800
+\begin{DoxyCompactList}\small\item\em width of the screen \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}} =500
+\begin{DoxyCompactList}\small\item\em height of the screen \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8cpp_a344adddb4b721b52e3bb43c1d6506c86}{last\+Update\+Time}} =0
+\begin{DoxyCompactList}\small\item\em last time we executed a step of the code \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_abf30848723419125d7009e38f1a42686}\label{main_8cpp_abf30848723419125d7009e38f1a42686}} 
+\index{main.cpp@{main.cpp}!EventTriggered@{EventTriggered}}
+\index{EventTriggered@{EventTriggered}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{EventTriggered()}{EventTriggered()}}
+{\footnotesize\ttfamily bool Event\+Triggered (\begin{DoxyParamCaption}\item[{double}]{interval }\end{DoxyParamCaption})}
+
+
+
+this function is used so that the next step of the algo is executed after some time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & the time to wait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if we can go ahead with the next step or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the window is made here 
+
+\begin{DoxyAttention}{Attention}
+raylib library is used to make the window 
+\end{DoxyAttention}
+if user left clicks a point add it to point\+\_\+location if it is a valid location
+
+if user clicks eneter then move to next phase, i.\+e run the algo now
+
+if user clicks enter after the algo is over then reset the screen
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_ad12fc34ce789bce6c8a05d8a17138534}\label{main_8cpp_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{main.cpp@{main.cpp}!height@{height}}
+\index{height@{height}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height =500}
+
+
+
+height of the screen 
+
+\mbox{\Hypertarget{main_8cpp_a344adddb4b721b52e3bb43c1d6506c86}\label{main_8cpp_a344adddb4b721b52e3bb43c1d6506c86}} 
+\index{main.cpp@{main.cpp}!lastUpdateTime@{lastUpdateTime}}
+\index{lastUpdateTime@{lastUpdateTime}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{lastUpdateTime}{lastUpdateTime}}
+{\footnotesize\ttfamily double last\+Update\+Time =0}
+
+
+
+last time we executed a step of the code 
+
+\mbox{\Hypertarget{main_8cpp_a2474a5474cbff19523a51eb1de01cda4}\label{main_8cpp_a2474a5474cbff19523a51eb1de01cda4}} 
+\index{main.cpp@{main.cpp}!width@{width}}
+\index{width@{width}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int width =800}
+
+
+
+width of the screen 
+
